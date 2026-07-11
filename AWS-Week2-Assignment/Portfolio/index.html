@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subham Prasad Nayak | Portfolio</title>
+    <meta
+      name="description"
+      content="Personal portfolio of Subham Prasad Nayak — Computer Science student interested in Machine Learning, Data Science, and Software Development."
+    />
+
+    <!-- Google Font: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ============ HEADER / NAVBAR ============ -->
+    <header class="navbar">
+      <div class="container navbar__inner">
+        <a href="#home" class="logo">Subham Prasad Nayak</a>
+
+        <!-- Hidden checkbox hack is NOT used (no JS allowed) -->
+        <nav class="nav" aria-label="Primary navigation">
+          <ul class="nav__list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="Subham_Prasad_Nayak_Resume.pdf" class="btn btn--primary btn--small" download
+          >Resume</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO SECTION ============ -->
+      <section id="home" class="hero">
+        <div class="container hero__inner">
+          <img
+            src="image/image.png"
+            alt="Portrait of Subham Prasad Nayak"
+            class="hero__avatar"
+          />
+          <h1 class="hero__name">Hi, I'm Subham Prasad Nayak</h1>
+          <p class="hero__intro">
+            A Computer Science student who loves turning data and ideas into
+            clean, working software.
+          </p>
+          <p class="hero__objective">
+            Aspiring to build intelligent, impactful products at the
+            intersection of Machine Learning and Software Engineering.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Contact Me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT SECTION ============ -->
+      <section id="about" class="section about">
+        <div class="container">
+          <h2 class="section__title">About Me</h2>
+          <div class="about__content">
+            <p>
+              I'm a curious and detail-oriented Computer Science student who
+              enjoys solving real-world problems with code. I like exploring how
+              data can be turned into meaningful insight, and how well-designed
+              software can make that insight useful to real people.
+            </p>
+
+            <h3 class="about__subtitle">Education</h3>
+            <p>
+              B.S in Computer Science & Data Analytics <br />
+              Indian Institute of Technology, Patna &middot; 2025 &ndash; 2029
+            </p>
+
+            <h3 class="about__subtitle">Career Interests</h3>
+            <ul class="about__interests">
+              <li>Computer Science</li>
+              <li>Machine Learning</li>
+              <li>Data Science</li>
+              <li>Software Development</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS SECTION ============ -->
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h2 class="section__title">Skills</h2>
+
+          <h3 class="skills__group-title">Programming</h3>
+          <div class="skills__grid">
+            <div class="skill-card"><p>Python</p></div>
+            <div class="skill-card"><p>HTML5</p></div>
+            <div class="skill-card"><p>CSS3</p></div>
+          </div>
+
+          <h3 class="skills__group-title">Libraries &amp; Tools</h3>
+          <div class="skills__grid">
+            <div class="skill-card"><p>Pandas</p></div>
+            <div class="skill-card"><p>NumPy</p></div>
+            <div class="skill-card"><p>Matplotlib</p></div>
+            <div class="skill-card"><p>Git</p></div>
+            <div class="skill-card"><p>GitHub</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS SECTION ============ -->
+     <!-- ============ PROJECTS SECTION ============ -->
+<section id="projects" class="section projects">
+  <div class="container">
+    <h2 class="section__title">Projects</h2>
+
+    <div class="projects__grid">
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <img
+          src="image/HEALTH-IQ.png"
+          alt="Health IQ project preview"
+          class="project-card__img"
+        />
+        <div class="project-card__body">
+          <h3 class="project-card__title">
+            Health IQ – AI Health Insurance Platform
+          </h3>
+
+          <p class="project-card__desc">
+            AI-powered health insurance comparison platform that enables users
+            to compare 1,100+ insurance plans, receive AI recommendations,
+            predict premiums, estimate claim approvals, and explore hospitals
+            through an interactive dashboard.
+          </p>
+
+          <p class="project-card__tech">
+            Python • Flask • Firebase • Gemini API • HTML • CSS • JavaScript • Render
+          </p>
+
+          <a
+            href="https://github.com/nayaksubhamprasad8-ux/HEALTH---IQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline btn--small"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <img
+          src="image/CIVI-X.png"
+          alt="CIVI-X project preview"
+          class="project-card__img"
+        />
+        <div class="project-card__body">
+          <h3 class="project-card__title">
+            CIVI-X – AI Smart City Platform
+          </h3>
+
+          <p class="project-card__desc">
+            Full-stack civic issue reporting platform with Citizen, Officer, and
+            Admin portals featuring AI-powered issue classification, complaint
+            prioritization, Google Maps integration, and real-time tracking.
+          </p>
+
+          <p class="project-card__tech">
+            Next.js • React • TypeScript • Node.js • Express • PostgreSQL • Prisma • Gemini Vision • GPT-4o
+          </p>
+
+          <a
+            href="https://github.com/nayaksubhamprasad8-ux/CIVI-X"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline btn--small"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <img
+          src="image/KFC Nutrition Dashboard.png"
+          alt="KFC Nutrition Dashboard preview"
+          class="project-card__img"
+        />
+        <div class="project-card__body">
+          <h3 class="project-card__title">
+            KFC Nutrition Dashboard
+          </h3>
+
+          <p class="project-card__desc">
+            Interactive Power BI dashboard that analyzes KFC nutritional data
+            using KPI cards, dynamic filtering, Power Query, and DAX to deliver
+            actionable business insights.
+          </p>
+
+          <p class="project-card__tech">
+            Power BI • Excel • Power Query • DAX
+          </p>
+
+          <a
+            href="https://github.com/nayaksubhamprasad8-ux/KFC-Nutrition-Dashboard"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline btn--small"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card">
+        <img
+          src="image/Netflix data visualization.png"
+          alt="Netflix Data Visualization project preview"
+          class="project-card__img"
+        />
+        <div class="project-card__body">
+          <h3 class="project-card__title">
+            Netflix Data Visualization & EDA
+          </h3>
+
+          <p class="project-card__desc">
+            Performed exploratory data analysis on Netflix datasets, uncovering
+            trends across genres, release years, and countries through
+            informative visualizations.
+          </p>
+
+          <p class="project-card__tech">
+            Python • Pandas • Matplotlib
+          </p>
+
+          <a
+            href="https://github.com/nayaksubhamprasad8-ux/Netflix-Data-Visualization"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--outline btn--small"
+          >
+            View on GitHub
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <!-- ============ CONTACT SECTION ============ -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2 class="section__title">Contact</h2>
+
+          <div class="contact__content">
+            <!-- Contact details -->
+            <div class="contact__info">
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:subhamprasadnayak123@gmail.com"
+                  >subhamprasadnayak123@gmail.com</a
+                >
+              </p>
+              <p>
+                <strong>LinkedIn:</strong>
+                <a
+                  href="https://linkedin.com/in/subhamprasadnayak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >linkedin.com/in/subhamprasadnayak</a
+                >
+              </p>
+              <p>
+                <strong>GitHub:</strong>
+                <a
+                  href="https://github.com/subham-prasad-nayak"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >github.com/subham-prasad-nayak</a
+                >
+              </p>
+            </div>
+
+            <!-- Contact form (no backend, front-end only) -->
+            <form class="contact__form" action="#" method="post">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
+
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+
+              <button type="submit" class="btn btn--primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p>&copy; 2026 Subham Prasad Nayak. All rights reserved.</p>
+        <ul class="footer__socials">
+          <li>
+            <a
+              href="https://github.com/nayaksubhamprasad8-ux"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/subhamprasadnayak"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="mailto:subhamprasadnayak123@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

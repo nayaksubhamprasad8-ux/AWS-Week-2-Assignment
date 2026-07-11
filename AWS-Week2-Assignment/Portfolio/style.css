@@ -1,0 +1,550 @@
+/* =======================================================
+   PORTFOLIO STYLESHEET
+   Pure CSS3 — no frameworks, no JavaScript.
+   ======================================================= */
+
+/* -------------------- 1. CSS VARIABLES -------------------- */
+:root {
+  /* Colors */
+  --color-primary: #2563EB;      /* main blue accent */
+  --color-primary-dark: #1E40AF; /* darker blue for hover states */
+  --color-primary-light: #EFF4FF;/* very light blue for backgrounds */
+  --color-text: #1F2937;         /* near-black body text */
+  --color-text-muted: #6B7280;   /* grey secondary text */
+  --color-bg: #FFFFFF;           /* page background */
+  --color-border: #E5E7EB;       /* light border/divider */
+
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --radius: 12px;
+  --shadow-soft: 0 4px 16px rgba(37, 99, 235, 0.08);
+  --shadow-hover: 0 10px 24px rgba(37, 99, 235, 0.16);
+  --transition: 0.25s ease;
+}
+
+/* -------------------- 2. RESET / BASE -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* smooth in-page scrolling for nav links */
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Reusable centered content wrapper, capped at 1200px */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Shared vertical rhythm + title style for each page section */
+.section {
+  padding: 80px 0;
+}
+
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-primary);
+  border-radius: 4px;
+  margin: 12px auto 0;
+}
+
+/* -------------------- 3. BUTTONS -------------------- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px; /* fully rounded pill buttons */
+  font-weight: 500;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition),
+    background-color var(--transition), color var(--transition);
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn--small {
+  padding: 8px 20px;
+  font-size: 0.85rem;
+}
+
+/* -------------------- 4. NAVBAR -------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--color-primary);
+}
+
+.nav__list {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.nav__list a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  position: relative;
+  padding-bottom: 4px;
+  transition: color var(--transition);
+}
+
+/* Underline hover effect for nav links */
+.nav__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition);
+}
+
+.nav__list a:hover {
+  color: var(--color-primary);
+}
+
+.nav__list a:hover::after {
+  width: 100%;
+}
+
+/* -------------------- 5. HERO SECTION -------------------- */
+.hero {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, #ffffff 100%);
+  text-align: center;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow-hover);
+  border: 4px solid #fff;
+  margin-bottom: 28px;
+  transition: transform var(--transition);
+}
+
+.hero__avatar:hover {
+  transform: scale(1.04);
+}
+
+.hero__name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero__intro {
+  max-width: 560px;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.hero__objective {
+  max-width: 560px;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* -------------------- 6. ABOUT SECTION -------------------- */
+.about__content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about__subtitle {
+  margin-top: 28px;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+}
+
+.about__interests {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.about__interests li {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* -------------------- 7. SKILLS SECTION -------------------- */
+.skills {
+  background-color: #FAFBFF;
+}
+
+.skills__group-title {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 32px 0 16px;
+}
+
+.skills__group-title:first-of-type {
+  margin-top: 0;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.skill-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 20px 16px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-primary);
+}
+
+/* -------------------- 8. PROJECTS SECTION -------------------- */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.project-card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--color-primary-light);
+}
+
+.project-card__body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-card__title {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.project-card__desc {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.project-card__tech {
+  font-size: 0.82rem;
+  color: var(--color-primary-dark);
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+/* -------------------- 9. CONTACT SECTION -------------------- */
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contact__info p {
+  margin-bottom: 16px;
+  font-size: 0.98rem;
+}
+
+.contact__info a {
+  color: var(--color-primary);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+
+.contact__info a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-soft);
+}
+
+.contact__form label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  outline: none;
+  resize: vertical;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.contact__form button {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+/* -------------------- 10. FOOTER -------------------- */
+.footer {
+  background-color: var(--color-text);
+  color: #fff;
+  padding: 28px 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__inner p {
+  font-size: 0.85rem;
+  color: #D1D5DB;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__socials a {
+  font-size: 0.85rem;
+  color: #D1D5DB;
+  transition: color var(--transition);
+}
+
+.footer__socials a:hover {
+  color: var(--color-primary);
+}
+
+/* =======================================================
+   11. MEDIA QUERIES — TABLET (<= 900px)
+   ======================================================= */
+@media (max-width: 900px) {
+  .contact__content {
+    grid-template-columns: 1fr; /* stack contact info above form */
+  }
+
+  .hero__name {
+    font-size: 2.1rem;
+  }
+}
+
+/* =======================================================
+   12. MEDIA QUERIES — MOBILE (<= 640px)
+   ======================================================= */
+@media (max-width: 640px) {
+  .navbar__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav__list {
+    justify-content: center;
+    gap: 16px;
+    order: 3;
+    width: 100%;
+  }
+
+  .section {
+    padding: 56px 0;
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding: 64px 0;
+  }
+
+  .hero__avatar {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero__name {
+    font-size: 1.8rem;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
