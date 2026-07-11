@@ -257,7 +257,7 @@ Indian Institute of Technology Patna
 
 📧 Email: subhamprasadnayak123@gmail.com
 
-🔗 LinkedIn: https://linkedin.com/in/subhamprasadnayak
+🔗 LinkedIn: https://www.linkedin.com/in/subham-prasad-nayak-769648378/
 
 💻 GitHub: https://github.com/nayaksubhamprasad8-ux
 
