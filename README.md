@@ -1,65 +1,143 @@
-# AWS-Week-2-Assignment
-AWS Week 2 Assignment: A responsive personal portfolio website hosted on Amazon S3 using AWS Static Website Hosting.
-# AWS Week 2 Assignment – Static Portfolio Website
+# ☁️ AWS Week 2 Assignment – Static Portfolio Website
 
-This project is a **responsive personal portfolio website** developed using **HTML5** and **CSS3** as part of the **AWS Cloud Computing Internship – Week 2 Assignment**. The website is designed as a static website and is deployed using **Amazon S3 Static Website Hosting**.
+## 📌 Overview
 
-## 📖 Project Overview
+This repository contains my **Week 2 assignment** for the **AWS Cloud Computing Internship**. The objective of this assignment was to gain practical experience with **AWS Compute and Storage Services**, particularly **Amazon EC2** and **Amazon S3**, by deploying a responsive personal portfolio website.
 
-The objective of this assignment was to:
-
-- Build a responsive portfolio website using HTML and CSS.
-- Host the website on Amazon S3.
-- Configure public access permissions.
-- Understand static website hosting on AWS.
-
-The portfolio showcases personal information, technical skills, featured projects, and contact details in a clean and responsive interface.
+The assignment focuses on understanding how cloud infrastructure can be used to host static web applications and introduces fundamental AWS services used in modern cloud deployments.
 
 ---
 
-## ✨ Features
+# 📚 Week 2 Topics Covered
 
-- Responsive design for desktop, tablet, and mobile devices
-- Sticky navigation bar with smooth scrolling
-- Hero section with profile picture
-- About Me section
+During Week 2, the following AWS services and concepts were studied:
+
+- Amazon EC2 (Elastic Compute Cloud)
+- Launching and managing EC2 instances
+- Connecting to EC2 using SSH
+- Amazon EBS (Elastic Block Store)
+- Creating EBS Snapshots
+- Amazon S3
+- Bucket Policies
+- Static Website Hosting
+- AWS CLI Basics
+
+---
+
+# 🎯 Assignment Objectives
+
+The assignment consisted of two hands-on tasks.
+
+## Task 1: Launch and Configure an EC2 Instance
+
+### Objective
+
+Learn how to create and configure a virtual server on AWS.
+
+### Activities Performed
+
+- Created an Ubuntu EC2 instance
+- Configured Security Groups
+- Connected to the instance using SSH
+- Installed a web server (Apache/Nginx)
+- Hosted a simple web page
+
+### Skills Learned
+
+- EC2 Instance Management
+- Linux Command Line
+- SSH Connectivity
+- Web Server Configuration
+
+---
+
+## Task 2: Static Website Hosting using Amazon S3
+
+### Objective
+
+Host a responsive static website using Amazon S3.
+
+### Activities Performed
+
+- Created an S3 bucket
+- Uploaded HTML, CSS, images, and assets
+- Disabled Block Public Access
+- Configured Bucket Policy
+- Enabled Static Website Hosting
+- Tested the deployed website
+
+### Skills Learned
+
+- Amazon S3
+- Static Website Hosting
+- Bucket Policies
+- Public Access Configuration
+- Website Deployment
+
+---
+
+# 💼 Mini Project
+
+## Personal Portfolio Website
+
+As part of the assignment, I developed a responsive **Personal Portfolio Website** using HTML and CSS and deployed it on **Amazon S3**.
+
+The website serves as my professional portfolio showcasing my education, technical skills, projects, and contact information.
+
+---
+
+# ✨ Features
+
+- Responsive design
+- Sticky navigation bar
+- Hero section
+- About section
 - Skills section
-- Featured Projects section
-- Resume download button
-- Contact information and contact form
-- Modern UI using pure CSS
-- No JavaScript or external frameworks used
+- Featured Projects
+- Resume download
+- Contact section
+- Responsive layout for desktop, tablet, and mobile devices
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
+
+## Frontend
 
 - HTML5
 - CSS3
-- Google Fonts (Poppins)
-- Amazon S3 (Static Website Hosting)
-- AWS Cloud Computing
+
+## Cloud Services
+
+- Amazon S3
+- AWS Static Website Hosting
+
+## Tools
+
+- Visual Studio Code
+- Git
+- GitHub
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```
-AWS-WEEK2-ASSIGNMENT/
+AWS-WEEK2-ASSIGNMENT
 │
-├── Portfolio/
+├── Portfolio
 │   ├── index.html
 │   ├── style.css
 │   ├── Subham_Prasad_Nayak_Resume.pdf
 │   │
-│   └── image/
+│   └── image
 │       ├── image.png
-│       ├── CIVI-X.png
 │       ├── HEALTH-IQ.png
+│       ├── CIVI-X.png
 │       ├── KFC Nutrition Dashboard.png
 │       └── Netflix data visualization.png
 │
-├── Portfolio Images/
+├── Portfolio Images
 │   ├── portfolio-home.png
 │   ├── portfolio-about.png
 │   ├── portfolio-skills.png
@@ -67,8 +145,8 @@ AWS-WEEK2-ASSIGNMENT/
 │   ├── portfolio-project-2.png
 │   ├── portfolio-contact.png
 │   ├── portfolio-vscode.png
-│   ├── ec2-launch-tutorial.png
 │   ├── ec2-overview.png
+│   ├── ec2-launch-tutorial.png
 │   ├── cloudfront-overview.png
 │   └── s3-static-website-tutorial.png
 │
@@ -77,101 +155,114 @@ AWS-WEEK2-ASSIGNMENT/
 
 ---
 
-## 🚀 Running the Website Locally
+# 📄 Portfolio Sections
 
-1. Clone the repository.
+The website contains the following sections:
 
-```bash
-git clone https://github.com/your-username/aws-week2-portfolio.git
-```
-
-2. Open the project folder.
-
-3. Open **index.html** in any web browser.
-
-No installation or dependencies are required.
+- Home
+- About Me
+- Skills
+- Projects
+- Contact
 
 ---
 
-## ☁️ Deploying on Amazon S3
 
-### Step 1
 
-Create an S3 bucket with a globally unique bucket name.
+# ☁️ Deployment on Amazon S3
 
-### Step 2
+## Step 1
+
+Create an Amazon S3 Bucket.
+
+---
+
+## Step 2
 
 Disable **Block Public Access**.
 
-### Step 3
+---
 
-Upload all project files.
+## Step 3
 
-### Step 4
+Upload all website files.
+
+---
+
+## Step 4
 
 Enable **Static Website Hosting**.
 
-Configure:
-
-- Index document
+Configuration:
 
 ```
+Index Document:
+index.html
+
+Error Document:
 index.html
 ```
 
-- Error document
+---
 
-```
-index.html
-```
+## Step 5
 
-### Step 5
-
-Attach a bucket policy to allow public read access.
-
-### Step 6
-
-Open the generated S3 Website Endpoint URL to access the deployed website.
-
---
-
-## 📚 Learning Outcomes
-
-Through this assignment, I learned how to:
-
-- Build a responsive static website using HTML and CSS.
-- Organize project files efficiently.
-- Host static websites using Amazon S3.
-- Configure bucket permissions and static hosting.
-- Understand the basics of AWS cloud storage and web hosting.
+Attach a Bucket Policy allowing public read access.
 
 ---
 
-## 📌 Future Improvements
+## Step 6
 
-- Add JavaScript for interactive components.
-- Integrate a working contact form.
-- Deploy using Amazon CloudFront with HTTPS.
-- Connect a custom domain using Route 53.
-- Improve accessibility and SEO.
+Open the generated Website Endpoint URL.
+
+The portfolio website is now publicly accessible.
 
 ---
 
-## 👨‍💻 Author
+
+
+# 📖 Learning Outcomes
+
+By completing this assignment, I gained practical experience in:
+
+- Understanding AWS Cloud Computing fundamentals
+- Creating and managing EC2 instances
+- Connecting to cloud servers using SSH
+- Working with Amazon EBS
+- Hosting static websites on Amazon S3
+- Configuring bucket permissions and policies
+- Deploying production-ready static web applications
+- Organizing frontend project files
+- Using Git and GitHub for version control
+
+---
+
+# 🔮 Future Improvements
+
+- Add JavaScript for interactive components
+- Connect contact form with AWS Lambda/API Gateway
+- Deploy through Amazon CloudFront for CDN support
+- Configure HTTPS using AWS Certificate Manager
+- Register a custom domain with Amazon Route 53
+- Improve SEO and accessibility
+
+---
+
+# 👨‍💻 Author
 
 **Subham Prasad Nayak**
 
 B.S. Computer Science & Data Analytics  
 Indian Institute of Technology Patna
 
-**Email:** subhamprasadnayak123@gmail.com
+📧 Email: subhamprasadnayak123@gmail.com
 
-**GitHub:** https://github.com/nayaksubhamprasad8-ux
+🔗 LinkedIn: https://linkedin.com/in/subhamprasadnayak
 
-**LinkedIn:** https://linkedin.com/in/subhamprasadnayak
+💻 GitHub: https://github.com/nayaksubhamprasad8-ux
 
 ---
 
-## 📄 License
+# 📜 License
 
-This project was developed for educational purposes as part of the **AWS Cloud Computing Internship (Week 2 Assignment)**.
+This project was developed for educational purposes as part of the **AWS Cloud Computing Internship – Week 2 Assignment**.
